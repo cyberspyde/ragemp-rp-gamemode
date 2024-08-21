@@ -20,15 +20,15 @@ const CharacterSelector: FC<{ store: typeof playerStore }> = observer(({ store }
     return (
         <div className={style.main}>
             <div className={style.header}>
-                CHARACTER SELECTION
-                <span className={style.desc}>Select or create a character to continue</span>
+                O'YINCHINI TANLASH
+                <span className={style.desc}>Davom etish uchun o'yinchini tanlang yoki yangi yarating</span>
             </div>
 
             <div className={style.characters}>
                 {store.characters.map((x, i) => {
                     return x.type === 0 ? (
                         <div className={style.create} key={i} onClick={() => createCharacter()}>
-                            <span>Create Character</span>
+                            <span>O'yinchi yaratish</span>
                         </div>
                     ) : (
                         <div className={style.character} key={i} onClick={() => selectCharacter(x.id)}>
@@ -42,7 +42,7 @@ const CharacterSelector: FC<{ store: typeof playerStore }> = observer(({ store }
                                     <img src={bankIcon} alt="money" />${x.bank}
                                 </span>
                             </div>
-                            <span className={style.spawn}>SPAWN CHARACTER</span>
+                            <span className={style.spawn}>TANLASH</span>
                         </div>
                     );
                 })}

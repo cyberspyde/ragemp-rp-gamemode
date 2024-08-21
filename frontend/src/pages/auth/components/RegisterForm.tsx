@@ -16,7 +16,7 @@ export const RegisterForm: FC<{ setForm: (page: string) => void }> = ({ setForm 
         const [name, email, password, confirmPass] = [registerUsername.current, registerEmail.current, registerPassword.current, confirmRegisterPassword.current];
 
         if (!name || !password || !email || !confirmPass || !name.value.length || !password.value.length) {
-            Notification.error("Fill out the forms!");
+            Notification.error("Forma to'ldirilmadi!");
             return;
         }
 
@@ -38,20 +38,20 @@ export const RegisterForm: FC<{ setForm: (page: string) => void }> = ({ setForm 
         <div className={style.authform} ref={authForm} onSubmit={(e) => onSubmit(e)}>
             <form autoComplete="off">
                 <div className={style.content}>
-                    <input className={style.usernameInput} ref={registerUsername} type="text" name="auth_username" maxLength={32} placeholder="Username" autoComplete="off" />
+                    <input className={style.usernameInput} ref={registerUsername} type="text" name="auth_username" maxLength={32} placeholder="ID" autoComplete="off" />
                     <input ref={registerEmail} type="email" name="auth_email" maxLength={32} placeholder="Email" autoComplete="off" />
 
-                    <input ref={registerPassword} type="password" name="auth_password" maxLength={74} placeholder="Password" />
-                    <input ref={confirmRegisterPassword} type="password" name="auth_confirm_password" maxLength={74} placeholder="Confirm Password" />
+                    <input ref={registerPassword} type="password" name="auth_password" maxLength={74} placeholder="Parol" />
+                    <input ref={confirmRegisterPassword} type="password" name="auth_confirm_password" maxLength={74} placeholder="Parolni tasdiqlash" />
 
                     <button className={style.submit} type="submit" name="auth_submit">
-                        Register <img src={registerIcon} alt="register" />
+                        Ro'yxatdan o'tish <img src={registerIcon} alt="register" />
                     </button>
                 </div>
             </form>
             <div className={style.footer}>
-                Already have an account?
-                <span onClick={() => setForm("auth")}>Login now!</span>
+                Akkountingiz bormi?
+                <span onClick={() => setForm("auth")}>Kirish!</span>
             </div>
         </div>
     );

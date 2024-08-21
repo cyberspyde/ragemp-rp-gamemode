@@ -72,7 +72,7 @@ const ChatInput: FC<ChatInputProps> = ({ store, chatFocusFunc, chatBlur, chatRef
 
     useEffect(() => {
         //@ts-ignore
-        mp.invoke("setTypingInChatState", isFocused);
+        mp.trigger("setTypingInChatState", isFocused);
     }, [isFocused]);
 
     useEffect(() => {
@@ -189,7 +189,7 @@ const ChatInput: FC<ChatInputProps> = ({ store, chatFocusFunc, chatBlur, chatRef
                 <input
                     className={style.input}
                     type="text"
-                    placeholder={isFocused ? "Insert Message..." : ""}
+                    placeholder={isFocused ? "Xabarni kiriting..." : ""}
                     ref={input}
                     value={inputText}
                     onFocus={() => {

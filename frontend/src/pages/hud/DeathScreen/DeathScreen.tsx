@@ -42,11 +42,11 @@ const DeathScreen: FC<{ store: typeof playerStore }> = observer(({ store }) => {
                 <div className={style.fadein}></div>
                 <div className={style.fadeout}></div>
             </div>
-            <div className={style.header}>you are injured right now...</div>
-            <div className={style.desc}>You are injured. Please wait for doctors to arrive.</div>
+            <div className={style.header}>Siz yaralandingiz...</div>
+            <div className={style.desc}>Siz yaralandinginz, shifokorlar kelishini kuting.</div>
             <div className={style.bottomdata}>
                 {store.data.deathTime === 0 ? (
-                    "PRESS E TO ACCEPT DEATH"
+                    "Kasalxonadan chiqish uchun E ni bosing"
                 ) : (
                     <div className={style.timer}>
                         <span className={style.text}>00</span>

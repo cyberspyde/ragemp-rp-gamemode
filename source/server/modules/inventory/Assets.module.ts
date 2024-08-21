@@ -1,60 +1,61 @@
 import { RageShared } from "@shared/index";
+import { inventoryAssets } from "./Items.module";
 
 const defaultClothes: { [key: number]: Array<{ type: "props" | "clothing"; component: number; drawable: number; texture: number }> } = {
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_HAT]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_HAT]: [
         { type: "props", component: 0, drawable: 11, texture: 0 },
         { type: "props", component: 0, drawable: 120, texture: 0 }
     ],
 
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_MASK]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_MASK]: [
         { type: "clothing", component: 1, drawable: 0, texture: 0 },
         { type: "clothing", component: 1, drawable: 0, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_GLASSES]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_GLASSES]: [
         { type: "props", component: 1, drawable: 0, texture: 0 },
         { type: "props", component: 1, drawable: 12, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_EARRINGS]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_EARRINGS]: [
         { type: "props", component: 2, drawable: 0, texture: -1 },
         { type: "props", component: 2, drawable: 0, texture: -1 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_CHAIN]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_CHAIN]: [
         { type: "clothing", component: 7, drawable: 0, texture: 0 },
         { type: "clothing", component: 7, drawable: 0, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_TSHIRT]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_TSHIRT]: [
         { type: "clothing", component: 8, drawable: 0, texture: -1 },
         { type: "clothing", component: 8, drawable: 0, texture: -1 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_JACKET]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_JACKET]: [
         { type: "clothing", component: 11, drawable: 15, texture: 0 },
         { type: "clothing", component: 11, drawable: 15, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_BACKPACK]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_BACKPACK]: [
         { type: "clothing", component: 5, drawable: 0, texture: 0 },
         { type: "clothing", component: 5, drawable: 0, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_WALLET]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_WALLET]: [
         { type: "props", component: 12, drawable: 0, texture: 0 },
         { type: "props", component: 12, drawable: 0, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_ARMOUR]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_ARMOUR]: [
         { type: "clothing", component: 9, drawable: 0, texture: 0 },
         { type: "clothing", component: 9, drawable: 0, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_WATCH]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_WATCH]: [
         { type: "props", component: 6, drawable: 0, texture: -1 },
         { type: "props", component: 6, drawable: 0, texture: -1 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_GLOVES]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_GLOVES]: [
         { type: "clothing", component: 3, drawable: 15, texture: 0 },
         { type: "clothing", component: 3, drawable: 15, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_PANTS]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_PANTS]: [
         { type: "clothing", component: 4, drawable: 21, texture: 0 },
         { type: "clothing", component: 4, drawable: 15, texture: 0 }
     ],
-    [RageShared.Inventory.Enums.INVENTORY_CLOTHING.TYPE_SHOES]: [
+    [inventoryAssets.INVENTORY_CLOTHING.TYPE_SHOES]: [
         { type: "clothing", component: 6, drawable: 34, texture: 0 },
         { type: "clothing", component: 6, drawable: 35, texture: 0 }
     ]

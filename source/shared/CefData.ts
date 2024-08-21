@@ -16,10 +16,7 @@ export namespace CefData {
             hud: {
                 setInteraction: RageShared.Interfaces.InteractionData;
                 setVehicleData: { key: keyof RageShared.Vehicles.Interfaces.SpeedometerData; data: any };
-                showInteractionButton: RageShared.Interfaces.IInteractButton | null;
-            };
-            nativemenu: {
-                setData: RageShared.Interfaces.INativeMenu;
+                showInteractionButton: { button: string; title: string; text: string } | null;
             };
             chat: {
                 setCommands: string[];
@@ -54,10 +51,6 @@ export namespace CefData {
             creator: {
                 naviation: (player: PlayerMp, data: string) => void;
                 create: (player: PlayerMp, data: StringifiedObject<RageShared.Players.Interfaces.CreatorData>) => void;
-            };
-
-            settings: {
-                changePassword: (player: PlayerMp, data: StringifiedObject<{ old: string; new: string }>) => void;
             };
 
             chat: {

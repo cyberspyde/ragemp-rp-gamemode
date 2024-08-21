@@ -52,9 +52,6 @@ export class CharacterEntity {
     @Column({ type: "int", width: 11, default: 0 })
     deathState: RageShared.Players.Enums.DEATH_STATES = RageShared.Players.Enums.DEATH_STATES.STATE_NONE;
 
-    @Column({ type: "int", width: 11, default: 1500 })
-    cash: number = 1500;
-
     @OneToMany(() => BankAccountEntity, (bank) => bank.character)
     bank: BankAccountEntity[];
 
@@ -110,7 +107,7 @@ export class CharacterEntity {
 
         player.setVariable("adminLevel", player.character.adminlevel);
 
-        CefEvent.emit(player, "player", "setKeybindData", { I: "Open Inventory", ALT: "Interaction" });
+        CefEvent.emit(player, "player", "setKeybindData", { I: "Inventarni ochish", ALT: "Harakatlar" });
 
         await player.requestCollisionAt(x, y, z).then(() => {
             player.spawn(new mp.Vector3(x, y, z));
@@ -120,14 +117,12 @@ export class CharacterEntity {
         if (player.character.deathState === RageShared.Players.Enums.DEATH_STATES.STATE_INJURED) {
             setPlayerToInjuredState(player);
         }
-        player.outputChatBox(`Welcome to !{red}RAGEMP ROLEPLAY!{white} ${player.name}!`);
+        player.outputChatBox(`!{green}Uzbekistan RP!{green} ga Xush kelibsiz ${player.name}!`);
         if (player.character.adminlevel) {
-            player.outputChatBox(`>>> You are logged in as !{green}LEVEL ${player.character.adminlevel}!{white} admin!`);
+            player.outputChatBox(`>>> Admin darajasi !{green}LEVEL ${player.character.adminlevel}!{white}!`);
         }
 
-        player.character.setStoreData(player, "cash", player.character.cash);
-
-        !player.character.lastlogin ? (player.character.lastlogin = new Date()) : player.outputChatBox(`Your last login was on ${player.character.lastlogin}`);
+        //!player.character.lastlogin ? (player.character.lastlogin = new Date()) : player.outputChatBox(`Your last login was on ${player.character.lastlogin}`);
 
         player.character.lastlogin = new Date();
         CommandRegistry.reloadCommands(player);

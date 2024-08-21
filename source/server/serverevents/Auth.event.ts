@@ -46,9 +46,9 @@ RAGERP.cef.register("auth", "loginPlayer", async (player, data) => {
     const { username, password } = RAGERP.utils.parseObject(data);
 
     const accountData = await RAGERP.database.getRepository(AccountEntity).findOne({ where: { username: username.toLowerCase() } });
-    if (!accountData) return player.showNotify(RageShared.Enums.NotifyType.TYPE_ERROR, "We could not find that account!");
+    if (!accountData) return player.showNotify(RageShared.Enums.NotifyType.TYPE_ERROR, "Bunday akkount topilmadi!");
 
-    if (hashPassword(password) !== accountData.password) return player.showNotify(RageShared.Enums.NotifyType.TYPE_ERROR, "Wrong password.");
+    if (hashPassword(password) !== accountData.password) return player.showNotify(RageShared.Enums.NotifyType.TYPE_ERROR, "Parolda xatolik.");
 
     player.account = accountData;
     player.name = player.account.username;
